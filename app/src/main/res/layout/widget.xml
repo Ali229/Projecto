@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="300dp"
+    android:layout_height="80dp"
+    android:id="@+id/widgetLayout"
+    android:background="@drawable/rounded_corners">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/city"
+        android:id="@+id/widCity"
+        android:layout_gravity="left|top"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#ffffffff"
+        android:layout_marginLeft="8dp"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/temp"
+        android:id="@+id/widTemp"
+        android:layout_gravity="left|bottom"
+        android:textColor="#ffffffff"
+        android:fontFamily="sans-serif"
+        android:layout_marginLeft="8dp"
+        android:textSize="36sp"
+        android:layout_marginBottom="3dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/update"
+        android:id="@+id/widTimeStamp"
+        android:layout_gravity="right|bottom"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="2dp" />
+
+    <ProgressBar
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:indeterminate="true"
+        android:id="@+id/pBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_gravity="right|top"
+        android:visibility="invisible"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/weather"
+        android:id="@+id/widWeather"
+        android:layout_gravity="right|center_vertical"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="#ffffffff"
+        android:textSize="14sp"
+        android:layout_marginRight="50dp" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/rButton"
+        android:src="@drawable/refresh"
+        android:layout_gravity="right|top"
+        android:contentDescription="@string/WeatherIcon"
+        android:nestedScrollingEnabled="false"
+        android:paddingTop="2dp"
+        android:paddingRight="2dp"
+        android:paddingLeft="63dp"
+        android:paddingBottom="62dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/widCondition"
+        android:src="@drawable/weather_sunny"
+        android:layout_gravity="right|center_vertical"
+        android:contentDescription="@string/WeatherIcon"
+        android:layout_marginRight="8dp"
+        android:padding="0dp"
+        android:scaleType="centerInside" />
+
+</FrameLayout>

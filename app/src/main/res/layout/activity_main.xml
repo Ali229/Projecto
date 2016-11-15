@@ -1,0 +1,158 @@
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:fillViewport="true"
+        android:background="@drawable/rain">
+    <RelativeLayout android:id="@+id/parentLayout"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="#33343434">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:id="@+id/date"
+            android:textSize="40sp"
+            android:textColor="#ffffffff"
+            android:fontFamily="sans-serif-thin"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:shadowColor="#7F000000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="25"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/maindata"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temp"
+                android:id="@+id/temp"
+                android:textSize="70sp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffffff"
+                android:fontFamily="sans-serif-thin"
+                android:shadowColor="#7F000000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="25"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/minmax"
+                android:id="@+id/minmax"
+                android:textSize="15sp"
+                android:textColor="#ffffffff"
+                android:fontFamily="sans-serif-thin"
+                android:layout_marginBottom="5dp"
+                android:shadowColor="#7F000000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="25"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/weatherOut">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/conditionView"
+                android:layout_gravity="right"
+                android:src="@drawable/weather_sunny"
+                android:contentDescription="@string/WeatherIcon"
+                android:layout_weight="0.5"
+                android:scaleType="centerInside"
+                android:shadowColor="#7F000000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="25
+                "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weather"
+                android:id="@+id/weather"
+                android:textSize="25sp"
+                android:textColor="#ffffffff"
+                android:fontFamily="sans-serif-thin"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp"
+                android:shadowColor="#7F000000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="25"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/city"
+                android:id="@+id/city"
+                android:textSize="25sp"
+                android:textColor="#ffffffff"
+                android:fontFamily="sans-serif-thin"
+                android:shadowColor="#7F000000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="25"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomLayout"
+            android:layout_gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:fitsSystemWindows="true">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/loadingView"
+                android:src="@drawable/refresh"
+                android:contentDescription="@string/load"
+                android:scaleType="centerInside"
+                android:layout_gravity="end|center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/update"
+                android:id="@+id/timeStamp"
+                android:textColor="#ffffffff"
+                android:fontFamily="sans-serif-thin"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:shadowColor="#7F000000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="25"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
